@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RIEI</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="menu-container">
+            <a href="./index.html"><img src="./assets/JPG/lasalle-logo.jpg" alt="Logo Universidad La Salle México" class="logo"></a>
+            <nav class="menu-bar">
+                <button class="menu-toggle">☰</button> <!-- Hamburger menu for smaller screens -->
+                <ul class="menu">
+                    <li><a href="./index.html" class="active">Inicio</a></li>
+                    <li><a href="./podcast.html">Podcast</a></li>
+                    <li><a href="./laboratorio.html">Laboratorio de traducción</a></li>
+                    <li><a href="./lineas.html">Líneas de conocimiento</a></li>
+                    <li><a href="./convocatorias.html">Convocatorias</a></li>
+                    <li><a href="./publicaciones.html">Publicaciones</a></li>
+
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="slideshow-container">
+        <!-- Left arrow button -->
+        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+
+        <!-- Slide 1 -->
+        <div class="slide">
+            <img src="./assets/JPG/test background.jpg" alt="Slide 1" class="slide-image">
+            <div class="slide-text">
+                <h2>Title for Slide 1</h2>
+                <p>Description or content for Slide 1.</p>
+                <a href="#" class="read-more">Read More</a>
+            </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="slide">
+            <img src="slide2.jpg" alt="Slide 2" class="slide-image">
+            <div class="slide-text">
+                <h2>Title for Slide 2</h2>
+                <p>Description or content for Slide 2.</p>
+                <a href="#" class="read-more">Read More</a>
+            </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="slide">
+            <img src="slide3.jpg" alt="Slide 3" class="slide-image">
+            <div class="slide-text">
+                <h2>Title for Slide 3</h2>
+                <p>Description or content for Slide 3.</p>
+                <a href="#" class="read-more">Read More</a>
+            </div>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="slide">
+            <img src="slide4.jpg" alt="Slide 4" class="slide-image">
+            <div class="slide-text">
+                <h2>Title for Slide 4</h2>
+                <p>Description or content for Slide 4.</p>
+                <a href="#" class="read-more">Read More</a>
+            </div>
+        </div>
+
+        <!-- Right arrow button -->
+        <button class="next" onclick="moveSlide(1)">&#10095;</button>
+    </section>
+
+    <!-- Title and image container -->
+    <div class="title-container">
+        <div class="image-space">
+            <img src="./assets/PNG/red internacional de investigacion.png" class="image-space">
+        </div>
+        <h1>Red Internacional de Estudios sobre Interculturalidad</h1>
+    </div>
+
+    <!-- Grey container with text -->
+    <div class="text-container">
+        <div class="text-box">
+            La Red Internacional de Estudios sobre Interculturalidad (RIEI) es una red de investigación conformada por investigadores y por la comunidad universitaria. Está avalada por la Red Internacional de investigación La Salle (RIILSA) y la Universidad de La Salle Bajío A.C.
+        </div>
+    </div>
+    <script src="script.js"></script> <!-- Link to JavaScript file -->
+</body>
+</html>
+
+
