@@ -306,18 +306,22 @@ header {
 .title-container {
     display: flex;
     align-items: center;
-    justify-content: center;
-    margin-bottom: 20px;
+    justify-content: center;  
+    margin: 30px;
     position: relative;
-    flex-wrap: wrap; /* Allows stacking on smaller screens */
+    flex-wrap: wrap;
+    flex-direction: column;
 }
 
 /* Image placeholder */
 .image-space {
+    width: 120px;
+    height: 130px;
     display: flex;
-    width: 200px;
-    height: 200px;
-    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
 }
 
 /* Title styling */
@@ -345,7 +349,7 @@ h1 {
 /* Textbox inside the grey container */
 .text-box {
     max-width: 640px;
-    width: 100%; /* Responsive width */
+    width: 100%;
     font-size: 16px;
     line-height: 1.5;
     text-align: justify;
@@ -445,6 +449,7 @@ h1 {
 @media (max-width: 768px) {
     .box-linea {
         width: 100%;
+        height: fit-content;
     }
 
     .bi-color-title {
@@ -549,12 +554,12 @@ h1 {
 /* For larger tablets and smaller desktops */
 @media (max-width: 1024px) {
     .coordinadores-container {
-        flex-wrap: wrap; /* Allow wrapping of coordinador boxes */
-        justify-content: center; /* Center the boxes */
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     .coordinador-box {
-        width: 220px; /* Slightly smaller boxes */
+        width: 220px;
     }
 
     .image-placeholder {
@@ -573,11 +578,11 @@ h1 {
     .coordinadores-container {
         flex-direction: row;
         flex-wrap: wrap;
-        gap: 15px; /* Reduce gap between boxes */
+        gap: 15px;
     }
 
     .coordinador-box {
-        width: 180px; /* Smaller boxes for tablets */
+        width: 180px;
     }
 
     .image-placeholder {
@@ -587,21 +592,21 @@ h1 {
 
     .coordinador-info {
         font-size: 0.8rem;
-        margin-left: 0; /* Align centered on smaller screens */
+        margin-left: 0;
     }
 }
 
 /* For mobile devices (480px and below) */
 @media (max-width: 480px) {
     .coordinadores-container {
-        flex-direction: column; /* Stack coordinador boxes vertically */
+        flex-direction: column;
         align-items: center;
-        gap: 20px; /* Add space between stacked boxes */
+        gap: 20px;
     }
 
     .coordinador-box {
-        width: 100%; /* Full width on mobile */
-        max-width: 300px; /* Set a maximum width */
+        width: 100%; 
+        max-width: 300px;
     }
 
     .image-placeholder {
@@ -611,24 +616,26 @@ h1 {
     }
 
     .coordinador-info {
-        font-size: 0.75rem; /* Smaller font size */
+        font-size: 0.75rem;
         margin-left: 0;
         text-align: center;
     }
 
     .collapse-toggle {
-        font-size: 0.75rem; /* Adjust button size for mobile */
+        font-size: 0.75rem;
     }
 }
 /*--------------------------------------------------Page Podcast--------------------------------------------------------------*/
 
 .podcast-container{
     height: auto;
-    width: fit-content;
+    width: auto;
     margin-top: 50px;
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
+    
 }
 
 .spotify{
