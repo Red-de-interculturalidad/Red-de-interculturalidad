@@ -525,16 +525,60 @@ h1 {
 /* Page Podcast */
 
 .podcast-container{
-    height: 352px;
-    width: 352px;
+    height: auto;
+    width: fit-content;
     margin-top: 50px;
     display: flex;
-    justify-items: center;
+    flex-direction: row;
+    align-items: flex-start;
 }
 
-.podcast-container h2{
-    display: flex;
-    justify-content: center;
+.spotify{
     width: 352px;
-    margin-left: 100px;
+    align-items: flex-start;
+
+}
+
+.text-box h2{ 
+    width: fit-content;
+    text-align: left;
+    color: #f4f4f4;
+    background-color: #001E61;
+    border-radius: 15px;
+    padding: 1%;
+}
+
+.podcast-container .text-box {
+    margin: 50px;
+    text-align: left;
+    align-items: center;
+    width: auto;
+    background-color: rgb(204, 204, 204);
+    border-radius: 15px;
+}
+
+@media (max-width: 768px) {
+    .podcast-container {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .spotify {
+        width: 100%;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .podcast-container .text-box {
+        width: 90%;
+        margin: 20px 0;
+        padding: 10px;
+    }
+
+    .text-box h2 {
+        font-size: 1.2em;
+        padding: 2%;
+    }
 }
