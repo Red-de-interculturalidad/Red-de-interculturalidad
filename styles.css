@@ -524,15 +524,17 @@ h1 {
 
 /* Page Podcast */
 
-.spotify{
+.podcast-container{
+    height: 352px;
     width: 352px;
     margin-top: 50px;
     display: flex;
+    justify-items: center;
 }
 
 .podcast-container h2{
     display: flex;
     justify-content: center;
     width: 352px;
-
+    margin-left: 100px;
 }
