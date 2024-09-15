@@ -326,17 +326,17 @@ h1 {
     font-size: 28px;
     text-align: center;
     max-width: 100%;
-    flex-grow: 1; /* Allows the title to grow and take available space */
+    flex-grow: 1;
 }
 
 /* Grey text container */
 .text-container {
     background-color:#cfcfcf;
     max-width: 850px;
-    height: auto; /* Auto height for text content */
+    height: auto;
     margin: 20px auto;
     padding: 20px;
-    box-sizing: border-box; /* Ensures padding is included in width */
+    box-sizing: border-box;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -520,4 +520,19 @@ h1 {
         max-width: 230px;
         margin-bottom: 20px;
     }
+}
+
+/* Page Podcast */
+
+.spotify{
+    width: 352px;
+    margin-top: 50px;
+    display: flex;
+}
+
+.podcast-container h2{
+    display: flex;
+    justify-content: center;
+    width: 352px;
+
 }
