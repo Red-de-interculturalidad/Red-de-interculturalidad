@@ -32,3 +32,29 @@ function moveSlide(n) {
 
 // Initialize the slideshow
 showSlide(currentSlide);
+
+// Colapsable content coordinadores
+document.addEventListener("DOMContentLoaded", function() {
+    // Select all the buttons that toggle the collapsible content
+    const toggleButtons = document.querySelectorAll('.collapse-toggle');
+
+    // Loop through each toggle button
+    toggleButtons.forEach(button => {
+        // Add an event listener to each button for the click event
+        button.addEventListener('click', function() {
+            // Get the closest .coordinador-box parent of the clicked button
+            const coordinadorBox = this.closest('.coordinador-box');
+            
+            // Toggle the 'expanded' class on the .coordinador-box
+            coordinadorBox.classList.toggle('expanded');
+            
+            // Toggle button text based on the expanded state
+            if (coordinadorBox.classList.contains('expanded')) {
+                this.textContent = "Read Less";  // If expanded, change to "Read Less"
+            } else {
+                this.textContent = "Read More";  // If collapsed, change to "Read More"
+            }
+        });
+    });
+});
+
