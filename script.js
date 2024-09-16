@@ -74,95 +74,12 @@ document.querySelector('.slideshow-container').addEventListener('touchstart', ha
 document.querySelector('.slideshow-container').addEventListener('touchmove', handleSlideTouchMove);
 document.querySelector('.slideshow-container').addEventListener('touchend', handleSlideTouchEnd);
 
-
 // --------------------------------------------------------------------- Collapsible content for coordinadores
 
-document.addEventListener("DOMContentLoaded", function() {
-    // Select all the buttons that toggle the collapsible content
-    const toggleButtons = document.querySelectorAll('.collapse-toggle');
 
-    // Loop through each toggle button
-    toggleButtons.forEach(button => {
-        // Add an event listener to each button for the click event
-        button.addEventListener('click', function() {
-            // Get the closest .coordinador-box parent of the clicked button
-            const coordinadorBox = this.closest('.coordinador-box');
-            
-            // Toggle the 'expanded' class on the .coordinador-box
-            coordinadorBox.classList.toggle('expanded');
-            
-            // Toggle button text based on the expanded state
-            if (coordinadorBox.classList.contains('expanded')) {
-                this.textContent = "Leer menos";  // If expanded, change to "Leer menos"
-            } else {
-                this.textContent = "Leer más";  // If collapsed, change to "Leer más"
-            }
-        });
-    });
-});
 
 // --------------------------------------------------------------------- Carousel Functionality for "objetivos convocatoria"
 
-let currentConv = 0;
-let carouselStartX = 0;
-let carouselEndX = 0;
 
-const items = document.querySelectorAll('.carousel-item');
-const dots = document.querySelectorAll('.dot');
-const totalItems = items.length;
-
-// Carousel functionality
-function updateCarousel() {
-    const offset = -currentConv * 100;
-    items.forEach(item => {
-        item.style.transform = `translateX(${offset}%)`;
-    });
-    updateDots();
-}
-
-// Dots functionality
-function updateDots() {
-    dots.forEach(dot => dot.classList.remove('active'));
-    dots[currentConv].classList.add('active');
-}
-
-// Move to the next slide
-function nextSlide() {
-    currentConv = (currentConv + 1) % totalItems;
-    updateCarousel();
-}
-
-// Move to the previous slide
-function prevSlide() {
-    currentConv = (currentConv - 1 + totalItems) % totalItems;
-    updateCarousel();
-}
-
-// Handle dot clicks
-dots.forEach((dot, index) => {
-    dot.addEventListener('click', () => {
-        currentConv = index;
-        updateCarousel();
-    });
-});
-
-// Handle touch start (carousel)
-document.querySelector('.carousel').addEventListener('touchstart', (e) => {
-    carouselStartX = e.touches[0].clientX;
-});
-
-// Handle touch move (carousel)
-document.querySelector('.carousel').addEventListener('touchmove', (e) => {
-    carouselEndX = e.touches[0].clientX;
-});
-
-// Handle touch end (determine swipe direction for carousel)
-document.querySelector('.carousel').addEventListener('touchend', () => {
-    if (carouselStartX > carouselEndX + 50) {
-        nextSlide(); // Swipe left, next slide
-    } else if (carouselStartX < carouselEndX - 50) {
-        prevSlide(); // Swipe right, previous slide
-    }
-});
 
 

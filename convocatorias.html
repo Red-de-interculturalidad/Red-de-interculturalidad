@@ -74,6 +74,89 @@
     </section>
 
     <script src="script.js"></script> <!-- Link to JavaScript file -->
+    
+    <script>
+let currentIndex = 0;
+let carouselStartX = 0;
+let carouselEndX = 0;
+const carouselIntervalTime = 5000; // 10 seconds
+
+const items = document.querySelectorAll('.carousel-item');
+const dots = document.querySelectorAll('.dot');
+const totalItems = items.length;
+
+// Carousel functionality
+function updateCarousel() {
+    const offset = -currentIndex * 100;
+    items.forEach(item => {
+        item.style.transform = `translateX(${offset}%)`;
+    });
+    updateDots();
+}
+
+// Dots functionality
+function updateDots() {
+    dots.forEach(dot => dot.classList.remove('active'));
+    dots[currentIndex].classList.add('active');
+}
+
+// Move to the next slide
+function nextSlide() {
+    currentIndex = (currentIndex + 1) % totalItems;
+    updateCarousel();
+}
+
+// Move to the previous slide
+function prevSlide() {
+    currentIndex = (currentIndex - 1 + totalItems) % totalItems;
+    updateCarousel();
+}
+
+// Initialize the carousel
+updateCarousel();
+
+// Function to automatically switch carousel items every 10 seconds
+let carouselInterval = setInterval(() => {
+    nextSlide(); // Move to the next slide
+}, carouselIntervalTime);
+
+// Pause and restart the interval when the user interacts with the carousel
+function resetCarouselInterval() {
+    clearInterval(carouselInterval);
+    carouselInterval = setInterval(() => {
+        nextSlide();
+    }, carouselIntervalTime);
+}
+
+// Handle dot clicks
+dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+        currentIndex = index;
+        updateCarousel();
+        resetCarouselInterval(); // Reset the auto-slide when a dot is clicked
+    });
+});
+
+// Handle touch start (carousel)
+document.querySelector('.carousel').addEventListener('touchstart', (e) => {
+    carouselStartX = e.touches[0].clientX;
+    resetCarouselInterval(); // Reset the auto-slide when a swipe starts
+});
+
+// Handle touch move (carousel)
+document.querySelector('.carousel').addEventListener('touchmove', (e) => {
+    carouselEndX = e.touches[0].clientX;
+});
+
+// Handle touch end (determine swipe direction for carousel)
+document.querySelector('.carousel').addEventListener('touchend', () => {
+    if (carouselStartX > carouselEndX + 50) {
+        nextSlide(); // Swipe left, next slide
+    } else if (carouselStartX < carouselEndX - 50) {
+        prevSlide(); // Swipe right, previous slide
+    }
+});
+    </script>
 </body>
 </html>
 

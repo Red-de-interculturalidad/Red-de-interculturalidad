@@ -62,7 +62,7 @@
             <img class="image-placeholder" src="./assets/coordinadores/Foto_Viridiana Roa.jpg">
             <div class="coordinador-info">
                 <p>Lorem ipsum dolor sit amet.</p>
-                <button class="collapse-toggle">Leer más</button>
+                <button class="collapse-toggle">Leer +</button>
                 <div class="collapsible-content">
                     <!-- Collapsible content -->
                     <h3>Formación académica</h3>
@@ -96,7 +96,7 @@
             <img class="image-placeholder" src="./assets/coordinadores/Foto_Mario Fernandez.jpg"></img>
             <div class="coordinador-info">
                 <p>Lorem ipsum dolor sit amet.</p>
-                <button class="collapse-toggle">Leer más</button>
+                <button class="collapse-toggle">Leer +</button>
                 <div class="collapsible-content">
                     <!-- Collapsible content -->
                     <h3>Formación académica</h3>
@@ -131,7 +131,7 @@
             <img class="image-placeholder" src="./assets/coordinadores/Foto_Hilda Ortega.jpeg"></img>
             <div class="coordinador-info">
                 <p>Lorem ipsum dolor sit amet.</p>
-                <button class="collapse-toggle">Leer más</button>
+                <button class="collapse-toggle">Leer +</button>
                 <div class="collapsible-content">
                     <!-- Collapsible content -->
                     <h3>Formación académica</h3>
@@ -165,7 +165,7 @@
             <img class="image-placeholder" src="./assets/coordinadores/Foto_Elena Cruz.jpeg"></img>
             <div class="coordinador-info">
                 <p>Lorem ipsum dolor sit amet.</p>
-                <button class="collapse-toggle">Leer más</button>
+                <button class="collapse-toggle">Leer +</button>
                 <div class="collapsible-content">
                     <!-- Collapsible content -->
                     <h3>Formación académica</h3>
@@ -199,6 +199,31 @@
 </div>
 
     <script src="script.js"></script> <!-- Link to JavaScript file -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+    // Select all the buttons that toggle the collapsible content
+    const toggleButtons = document.querySelectorAll('.collapse-toggle');
+
+    // Loop through each toggle button
+    toggleButtons.forEach(button => {
+        // Add an event listener to each button for the click event
+        button.addEventListener('click', function() {
+            // Get the closest .coordinador-box parent of the clicked button
+            const coordinadorBox = this.closest('.coordinador-box');
+            
+            // Toggle the 'expanded' class on the .coordinador-box
+            coordinadorBox.classList.toggle('expanded');
+            
+            // Toggle button text based on the expanded state
+            if (coordinadorBox.classList.contains('expanded')) {
+                this.textContent = "Leer -";  // If expanded, change to "Read Less"
+            } else {
+                this.textContent = "Leer +";  // If collapsed, change to "Read More"
+            }
+        });
+    });
+});
+    </script>
 </body>
 </html>
 

@@ -201,6 +201,11 @@ header {
     align-items: center;
 }
 
+/* Show the current slide */
+.show {
+    display: block !important;
+}
+
 /* Each slide */
 .slide {
     display: none; /* Hide all slides by default */
@@ -784,12 +789,21 @@ section {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     touch-action: pan-y; /* Enable touch support */
+    transition: transform 0.5s ease-in-out;
 }
 
-.carousel-item {
-    min-width: 100%;
-    transition: transform 0.5s ease-in-out;
-    padding: 20px;
+/* Slideshow and Carousel container styling */
+.slideshow-container, .carousel {
+    overflow: hidden;
+    position: relative;
+}
+
+.slide, .carousel-item {
+    width: 100%;
+    display: inline-block;
+    transition: transform 0.5s ease-in-out; /* Smooth transition for sliding */
+    /* For carousel-item */
+    min-width: 100%; /* Ensure each item in the carousel takes up the full width */
 }
 
 .carousel-item h3 {
@@ -809,6 +823,10 @@ section {
     margin-top: 10px;
 }
 
+.carousel-item.active, .slide.active {
+    transition: transform 0.5s ease-in-out; /* Transition effect for sliding */
+}
+
 .dot {
     height: 12px;
     width: 12px;
@@ -817,6 +835,7 @@ section {
     border-radius: 50%;
     display: inline-block;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 .dot.active {
