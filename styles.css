@@ -25,17 +25,17 @@ header {
     display: flex;
     align-items: center;
     padding: 6px 0;
-    margin: 18px auto;
-    position: relative;
-    justify-content: space-between;
-    box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.1); /* Shadow down and left */
+    position: fixed;
+    justify-content: center;
+    z-index: 1000;
+    box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.1);
     background-color: #ffffff;
-    max-width: 100%; /* Container can't be wider than the screen */
-    min-width: 300px; /* Minimum width to ensure readability on small screens */
-    width: auto; /* Auto width based on content */
-    padding-left: 20px;
+    max-width: 100%;
+    min-width: 300px;
+    width: 96%;
     padding-right: 20px;
     border-radius: 10px;
+    
 }
 
 /* Logo styles */
@@ -62,7 +62,7 @@ header {
     justify-content: center;
     align-items: center;
     flex-wrap: nowrap; /* Prevents menu items from wrapping onto a new line */
-    width: 100%;
+    width: 90%;
 }
 
 .menu li {
@@ -138,6 +138,7 @@ header {
     .menu-container {
         flex-direction: column;
         align-items: flex-start;
+        position: relative;
     }
 
     /* Hamburger menu for smaller screens */
@@ -172,6 +173,7 @@ header {
 @media (max-width: 576px) {
     .menu-container {
         margin: 0;
+        position: relative;
     }
 
     .logo {
@@ -193,7 +195,7 @@ header {
     max-width: 100%;
     height: 500px;
     overflow: hidden;
-    margin: auto;
+    margin-top: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -408,6 +410,7 @@ h1 {
 
 /* Main container to hold the title and content */
 .container-linea {
+    margin-top: 120px;
     max-width: 100%;
     text-align: center;
 }
@@ -626,7 +629,9 @@ h1 {
     }
 }
 /*--------------------------------------------------Page Podcast--------------------------------------------------------------*/
-
+.title-podcast {
+    margin-top: 120px;
+}
 .podcast-container{
     height: auto;
     width: auto;
@@ -685,5 +690,161 @@ h1 {
     .text-box h2 {
         font-size: 1.2em;
         padding: 2%;
+    }
+}
+
+/*--------------------------------------- Page Convocatoria -----------------------------------------*/
+
+/* Section content */
+section {
+    padding: 50px;
+    margin-top: 100px;
+}
+#descripcion h2, #tipos h2 {
+
+    text-align: center;
+    font-size: 2rem;
+    padding: 20px;
+    margin-top: 10px;
+}
+#descripcion p, #tipos p {
+    text-align: center;
+    font-size: 1rem;
+}
+
+/* For tablets and smaller devices */
+@media (max-width: 768px) {
+    .sub-menu {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .sub-menu li a {
+        font-size: 1rem;
+        padding: 10px 0;
+    }
+}
+
+/* For mobile devices (max-width: 480px) */
+@media (max-width: 480px) {
+    .sub-menu {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .sub-menu li a {
+        font-size: 0.9rem;
+        padding: 8px 0;
+    }
+}
+
+/*---------Carousel Objetivos-------------*/
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Layout for objetivos section and carousel */
+.objetivos-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    margin-bottom: 10px;
+    flex-wrap: wrap; /* Allow content to wrap for smaller screens */
+}
+
+.objetivos-content {
+    width: 45%; /* Takes 45% of the space */
+    text-align: center;
+}
+
+.objetivos-content h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.objetivos-content p {
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: center;
+}
+
+/* Carousel container takes up 45% of the space */
+.carousel-container {
+    width: 45%;
+    position: relative;
+}
+
+.carousel {
+    display: flex;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    touch-action: pan-y; /* Enable touch support */
+}
+
+.carousel-item {
+    min-width: 100%;
+    transition: transform 0.5s ease-in-out;
+    padding: 20px;
+}
+
+.carousel-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.carousel-item p {
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+/* Dots for navigation */
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.dot {
+    height: 12px;
+    width: 12px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #001E61;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .objetivos-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .objetivos-content, .carousel-container {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .carousel-item h3 {
+        font-size: 1.3rem;
+    }
+
+    .carousel-item p {
+        font-size: 0.9rem;
+    }
+
+    .dot {
+        height: 10px;
+        width: 10px;
     }
 }
