@@ -46,7 +46,7 @@ let slideInterval = setInterval(() => {
 // Pause and restart the interval when the user interacts with the slide
 function resetSlideInterval() {
     clearInterval(slideInterval);
-    slideInterval = setInterval(() => {
+    slideInterval = setIntierval(() => {
         moveSlide(1);
     }, slideIntervalTime);
 }
@@ -74,11 +74,6 @@ document.querySelector('.slideshow-container').addEventListener('touchstart', ha
 document.querySelector('.slideshow-container').addEventListener('touchmove', handleSlideTouchMove);
 document.querySelector('.slideshow-container').addEventListener('touchend', handleSlideTouchEnd);
 
-// --------------------------------------------------------------------- Collapsible content for coordinadores
-
-
-
-// --------------------------------------------------------------------- Carousel Functionality for "objetivos convocatoria"
 
 
 

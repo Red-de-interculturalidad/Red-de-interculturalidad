@@ -704,6 +704,17 @@ h1 {
 section {
     padding: 50px;
     margin-top: 100px;
+
+}
+#descripcion { 
+    width: 1200px;
+    height: auto;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+
 }
 #descripcion h2, #tipos h2 {
 
@@ -713,7 +724,7 @@ section {
     margin-top: 10px;
 }
 #descripcion p, #tipos p {
-    text-align: center;
+    text-align: justify;
     font-size: 1rem;
 }
 
@@ -763,7 +774,7 @@ section {
 
 .objetivos-content {
     width: 45%; /* Takes 45% of the space */
-    text-align: center;
+    text-align: justify;
 }
 
 .objetivos-content h2 {
@@ -773,8 +784,7 @@ section {
 
 .objetivos-content p {
     font-size: 1rem;
-    line-height: 1.5;
-    text-align: center;
+    text-align: justify;
 }
 
 /* Carousel container takes up 45% of the space */
