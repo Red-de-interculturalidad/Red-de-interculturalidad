@@ -61,16 +61,16 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: nowrap; /* Prevents menu items from wrapping onto a new line */
+    flex-wrap: nowrap;
     width: 90%;
 }
 
 .menu li {
     margin: 0 15px;
-    flex-shrink: 1; /* Allow items to shrink */
-    flex-grow: 1; /* Allow items to grow */
-    text-align: center; /* Center text in each menu item */
-    white-space: nowrap; /* Ensure text doesn't wrap */
+    flex-shrink: 1;
+    flex-grow: 1;
+    text-align: center;
+    white-space: nowrap;
 }
 
 .menu li a {
@@ -93,7 +93,7 @@ header {
 
 /* Hamburger menu styling */
 .menu-toggle {
-    display: none; /* Hidden by default */
+    display: none;
     background: none;
     border: none;
     font-size: 28px;
@@ -199,6 +199,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 20px;
 }
 
 /* Show the current slide */
@@ -208,7 +209,7 @@ header {
 
 /* Each slide */
 .slide {
-    display: none; /* Hide all slides by default */
+    display: none; 
     position: absolute;
     width: 100%;
     height: 100%;
@@ -220,7 +221,7 @@ header {
 .slide-image {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensures images cover the entire slide area */
+    object-fit: cover;
 }
 
 /* Text area on each slide */
@@ -229,7 +230,7 @@ header {
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    background-color: rgba(0, 0, 0, 0.6);
     color: #fff;
     width: 500px;
     height: 130px;
@@ -281,7 +282,7 @@ header {
 /* Responsive design */
 @media screen and (max-width: 768px) {
     .slide-text {
-        width: 80%; /* Text area adjusts to smaller screens */
+        width: 80%;
     }
 
     .read-more {
@@ -289,14 +290,14 @@ header {
     }
 
     .prev, .next {
-        padding: 12px; /* Smaller navigation buttons on mobile */
+        padding: 12px;
     }
 }
 
 @media screen and (max-width: 576px) {
     .slide-text {
         width: 90%;
-        font-size: 14px; /* Adjust font size for smaller screens */
+        font-size: 14px;
     }
 
     .read-more {
@@ -305,7 +306,7 @@ header {
     }
 
     .prev, .next {
-        padding: 10px; /* Further reduced size for mobile devices */
+        padding: 10px;
     }
 }
 
@@ -351,6 +352,7 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 20px;
 }
 
 /* Textbox inside the grey container */
@@ -366,17 +368,17 @@ h1 {
 /* Responsive Design */
 @media (max-width: 768px) {
     .image-space {
-        width: 150px; /* Smaller image for tablets and smaller screens */
+        width: 150px;
         height: 150px;
         margin-right: 15px;
     }
 
     h1 {
-        font-size: 24px; /* Smaller title font for tablets */
+        font-size: 24px;
     }
 
     .text-container {
-        max-width: 90%; /* Allow the text container to shrink on smaller screens */
+        max-width: 90%;
     }
 
     .text-box {
@@ -386,24 +388,24 @@ h1 {
 
 @media (max-width: 576px) {
     .title-container {
-        flex-direction: column; /* Stack image and title vertically on small screens */
+        flex-direction: column;
         align-items: center;
         text-align: center;
     }
 
     .image-space {
-        width: 120px; /* Smaller image for mobile phones */
+        width: 120px;
         height: 120px;
         margin-right: 0;
         margin-bottom: 15px;
     }
 
     h1 {
-        font-size: 20px; /* Smaller title font for phones */
+        font-size: 20px;
     }
 
     .text-container {
-        max-width: 95%; /* Make the text container more narrow on phones */
+        max-width: 95%;
         padding: 15px;
     }
 
@@ -449,6 +451,7 @@ h1 {
 /* Content boxes */
 .box-linea {
     background-color: #cfcfcf;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     height: auto;
     width: 100%;
     max-width: 700px;
@@ -457,10 +460,11 @@ h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: left;
+    text-align: center;
     margin-top: 20px;
     box-sizing: border-box;
     word-wrap: break-word;
+    border-radius: 20px;
 }
 
 .box-linea h2 {
@@ -505,6 +509,7 @@ h1 {
 /* Coordinador box styling */
 .coordinador-box {
     background-color: #C8102E;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     height: 350px;
     width: 400px;
     border-radius: 20px;
@@ -521,7 +526,6 @@ h1 {
 .image-placeholder {
     width: 200px;
     height: 200px;
-    background-color: #fff;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -537,7 +541,7 @@ h1 {
     margin-top: 20px;
     padding: 0;
     flex-direction: column;
-    text-align: center; /* Align content to the left */
+    text-align: center;
 }
 
 /* Collapsible content (initially hidden) */
@@ -545,7 +549,7 @@ h1 {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease-out;
-    text-align: left; /* Align text to the left */
+    text-align: left;
     padding: 0 10px;
 }
 
@@ -562,7 +566,7 @@ h1 {
 
 /* Expanded state */
 .coordinador-box.expanded .collapsible-content {
-    max-height:fit-content; /* Adjust as necessary */
+    max-height:fit-content;
     transition: max-height 0.5s ease-in;
 }
 
@@ -573,7 +577,6 @@ h1 {
 
 /* RESPONSIVE DESIGN */
 
-/* For larger tablets and smaller desktops */
 @media (max-width: 1024px) {
     .coordinadores-container {
         flex-wrap: wrap;
@@ -595,7 +598,6 @@ h1 {
     }
 }
 
-/* For tablets and smaller screens (768px and below) */
 @media (max-width: 768px) {
     .coordinadores-container {
         flex-direction: row;
@@ -618,7 +620,6 @@ h1 {
     }
 }
 
-/* For mobile devices (480px and below) */
 @media (max-width: 480px) {
     .coordinadores-container {
         flex-direction: column;
@@ -648,8 +649,16 @@ h1 {
     }
 }
 /*--------------------------------------------------Page Podcast--------------------------------------------------------------*/
+.podcast {
+    background-color: #000000db;
+}
+
 .title-podcast {
+    background-color:#f9f9f9;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.417);
+    border-radius: 20px;
     margin-top: 120px;
+
 }
 .podcast-container{
     height: auto;
@@ -683,6 +692,7 @@ h1 {
     align-items: center;
     width: auto;
     background-color: rgb(204, 204, 204);
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.417);
     border-radius: 15px;
 }
 
@@ -715,17 +725,20 @@ h1 {
 /*--------------------------------------- Page Convocatoria -----------------------------------------*/
 
 .general-convocatoria {
-    background-color: #cfcfcf;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
     align-items: center;
+    border-radius: 20px;
+    margin-bottom: 70px;
 }
 
 #descripcion { 
     width: 800px;
     height: auto;
     flex-direction: column;
-    margin: 0 0 80px 0;
+    margin-bottom: 15px;
 
 }
 
@@ -749,12 +762,17 @@ h1 {
     padding: 20px;
     margin-bottom: 10px;
     flex-wrap: wrap;
-    text-align: center; /* Allow content to wrap for smaller screens */
+    text-align: center; 
+    margin-bottom: 70px;
+    
 }
 
 .objetivos-content {
-    width: 45%; /* Takes 45% of the space */
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 45%;
     text-align: center;
+    border-radius: 20px;
 }
 
 .objetivos-content h2 {
@@ -767,7 +785,6 @@ h1 {
     text-align: center;
 }
 
-/* Carousel container takes up 45% of the space */
 .carousel-container {
     width: 45%;
     position: relative;
@@ -777,6 +794,7 @@ h1 {
     display: flex;
     overflow: hidden;
     border-radius: 10px;
+    background-color: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     touch-action: pan-y; /* Enable touch support */
     transition: transform 0.5s ease-in-out;
@@ -791,9 +809,8 @@ h1 {
 .slide, .carousel-item {
     width: 100%;
     display: inline-block;
-    transition: transform 0.5s ease-in-out; /* Smooth transition for sliding */
-    /* For carousel-item */
-    min-width: 100%; /* Ensure each item in the carousel takes up the full width */
+    transition: transform 0.5s ease-in-out;
+    min-width: 100%;
 }
 
 .carousel-item h3 {
@@ -814,7 +831,7 @@ h1 {
 }
 
 .carousel-item.active, .slide.active {
-    transition: transform 0.5s ease-in-out; /* Transition effect for sliding */
+    transition: transform 0.5s ease-in-out; 
 }
 
 .dot {
@@ -831,21 +848,98 @@ h1 {
 .dot.active {
     background-color: #001E61;
 }
+/*Participation section*/
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    text-align: center;
+    flex-direction: column;
+    width: 80%;
+    max-width: 1200px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin:auto;
+}
 
-/* Responsive design */
+.content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    margin: auto;
+}
+
+/* Info section */
+.info-section {
+    width: 45%;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 1rem;
+    text-align: left;
+    display: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Participation cards */
+.participation-types {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 50%;
+}
+
+.participation-card {
+    background-color: #cfcfcf;
+    padding: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.participation-card:hover {
+    transform: scale(1.05);
+}
+
+.participation-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.participation-card p {
+    font-size: 1rem;
+}
+
+
 @media (max-width: 900px) {
     #descripcion {
-        width: 90%; /* Adjust width to fit smaller screens */
-        margin-bottom: 50px; /* Adjust margin to reduce space */
+        width: 90%; 
+        margin-bottom: 50px; 
     }
 
     #descripcion h2, #tipos h2 {
-        font-size: 1.5rem; /* Reduce font size for headings */
-        padding: 15px; /* Adjust padding */
+        font-size: 1.5rem; 
+        padding: 15px; 
     }
 
     #descripcion p, #tipos p {
-        font-size: 0.9rem; /* Reduce font size for paragraphs */
+        font-size: 0.9rem; 
+    }
+
+    .content-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .info-section, .participation-types {
+        width: 100%;
+    }
+
+    .info-section {
+        margin-bottom: 20px;
     }
 }
 
@@ -876,17 +970,29 @@ h1 {
 
 @media (max-width: 600px) {
     #descripcion {
-        width: 100%; /* Take up full width on very small screens */
-        margin-bottom: 40px; /* Further reduce margin */
+        width: 100%;
+        margin-bottom: 40px; 
     }
 
     #descripcion h2, #tipos h2 {
-        font-size: 1.2rem; /* Smaller heading for phones */
-        padding: 10px; /* Less padding */
+        font-size: 1.2rem; 
+        padding: 10px;
     }
 
     #descripcion p, #tipos p {
-        font-size: 0.85rem; /* Adjust paragraph size for small screens */
+        font-size: 0.85rem;
+    }
+
+    .participation-card h2 {
+        font-size: 1.2rem;
+    }
+
+    .participation-card p {
+        font-size: 0.9rem;
+    }
+
+    .info-section {
+        font-size: 0.9rem;
     }
 }
 

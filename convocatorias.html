@@ -72,9 +72,27 @@
         </div>
     </div>
 
-    <div class="general-convocatoria">
-        <h2>Tipos de Participación</h2>
-        <p>Esta es la sección de tipos de participación...</p>
+    <div class="container">
+        <h1>Tipos de Participación en el Congreso de Interculturalidad</h1>
+        <div class="content-wrapper">
+            <div id="info" class="info-section"></div>
+            <div class="participation-types">
+                <div class="participation-card" onclick="showInfo('ponencias')">
+                    <h2>Ponencias</h2>
+                    <p>Haz clic para más información</p>
+                </div>
+
+                <div class="participation-card" onclick="showInfo('carteles')">
+                    <h2>Carteles</h2>
+                    <p>Haz clic para más información</p>
+                </div>
+
+                <div class="participation-card" onclick="showInfo('talleres')">
+                    <h2>Talleres</h2>
+                    <p>Haz clic para más información</p>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script src="script.js"></script> <!-- Link to JavaScript file -->
@@ -160,6 +178,60 @@ document.querySelector('.carousel').addEventListener('touchend', () => {
         prevSlide(); // Swipe right, previous slide
     }
 });
+    </script>
+    
+    <script>
+        const participationData = {
+    ponencias: `
+        <h2>Ponencias</h2>
+        <p>La postulación para presentar una Ponencia Oral requiere:</p>
+        <ul>
+            <li>Título de la ponencia.</li>
+            <li>Autores y adscripción (máximo 2 autores).</li>
+            <li>Línea General de conocimiento en la que desea participar.</li>
+            <li>Un resumen de 550 palabras máximo en español o inglés.</li>
+            <li>Planteamiento del problema.</li>
+            <li>Pertinencia intercultural.</li>
+            <li>Diseño metodológico.</li>
+            <li>Resultados y conclusiones.</li>
+            <li>Al menos un autor de la actividad debe estar inscrito en el Congreso para poder ser expuesta.</li>  
+        </ul>
+        <p>Enviar propuesta en formato Word a: <a href="mailto:riei@lasallebajio.edu.mx">riei@lasallebajio.edu.mx</a> escribiendo “Ponencia_Linea 1 o 2 o 3 o 4_Apellido autores” en el asunto y en documento adjunto. Por ejemplo: “Ponencia_linea3_Perez”.</p>
+    `,
+    carteles: `
+        <h2>Carteles</h2>
+        <p>Los carteles deben comunicar visualmente información clara y concisa facilitando la comprensión rápida del contenido; y fomenten la interacción con los evaluadores y público.</p>
+        <p><b>Características: </b></p>
+        <ul>
+            <li>Título claro (máximo 15 palabras).</li>
+            <li>Autores e institución.</li>
+            <li>Cumplir los elementos de la plantilla (Problemática, Objetivos, Metodologías y Resultados/Conclusiones).</li>
+        </ul>
+        <p><a href="">Plantilla para descargar</a></p>
+        <p>Enviar propuesta a: <a href="mailto:riei@lasallebajio.edu.mx">riei@lasallebajio.edu.mx</a></p>
+    `,
+    talleres: `
+        <h2>Talleres</h2>
+        <p>Requisitos para proponer un Taller:</p>
+        <ul>
+            <li>Título del taller.</li>
+            <li>Conocimientos y habilidades que serán desarrollados.</li>
+            <li>Descripción del taller y actividades.</li>
+            <li>Modalidad presencial.</li>
+            <li>Información de instrucor(es): Nombre completo, último grado de estudios, adscripción, email, teléfono, síntesis curricular (máximo 150 palabras), experiencia en los temas del taller que propone. Máximo 2 facilitadores por taller.</li>  
+            <li>Duración del taller (máximo 3 horas por día, 6 en total).</li>
+            <li>Número mínimo y máximo de personas inscritas para abrir.</li> 
+        </ul>
+        <p>Las propuestas serán evaluadas por el Comité Científico.</p>
+        <p>Enviar propuesta a: <a href="mailto:riei@lasallebajio.edu.mx">riei@lasallebajio.edu.mx</a></p>
+    `
+};
+
+function showInfo(type) {
+    const infoSection = document.getElementById('info');
+    infoSection.innerHTML = participationData[type];
+    infoSection.style.display = 'block';
+}
     </script>
 </body>
 </html>
