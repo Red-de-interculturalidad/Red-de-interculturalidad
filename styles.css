@@ -1,11 +1,28 @@
-/* General styling */
 @font-face {
-    font-family: 'LaSalleIndivisa';
-    src: url(./assets/Indivisafont/woff2) format('woff2'),
-         url('path-to-your-font/LaSalleIndivisa.woff') format('woff'),
-         url('path-to-your-font/LaSalleIndivisa.ttf') format('truetype');
+    font-family: 'IndivisaDisplay';
+    src: url(./assets/fonts/woff2/indivisa_display_sans-regular.woff2) format('woff2'),
+         url(./assets/fonts/woff/indivisa_display_sans-regular.woff) format('woff'),
+         url(./assets/fonts/ttf/Indivisa\ Display\ Sans-Regular.ttf.ttf) format('truetype');
+    font-weight:normal;
+    font-style:normal;
+}
+
+@font-face {
+    font-family: 'IndivisaFont';
+    src: url(./assets/fonts/woff2/indivisa_text_sans-regular.woff2) format('woff2'),
+         url(./assets/fonts/woff/indivisa_text_sans-regular.woff) format('woff'),
+         url(./assets/fonts/ttf/Indivisa\ Text\ Sans-Regular.ttf) format('truetype');
     font-weight: normal;
     font-style: normal;
+}
+
+@font-face {
+    font-family: 'IndivisaFont';
+    src: url(./assets/fonts/woff2/indivisa_text_sans-bold.woff2) format('woff2'),
+         url(./assets/fonts/woff/indivisa_text_sans-bold.woff) format('woff'),
+         url(./assets/fonts/ttf/Indivisa\ Text\ Sans-Bold.ttf) format('truetype');
+    font-weight: bold;
+    font-style: bold;
 }
 
 body {
@@ -13,6 +30,21 @@ body {
     margin: 0;
     padding: 20px;
     background-color: #f4f4f4;
+    font-family: 'IndivisaFont';
+}
+
+/* Title styling */
+h1 {
+    color: #C8102E;
+    font-size: 28px;
+    text-align: center;
+    max-width: 100%;
+    flex-grow: 1;
+    font-family: 'IndivisaDisplay';
+}
+
+h2, h3 {
+    font-family: 'IndivisaDisplay';  
 }
 
 /* Header */
@@ -332,15 +364,6 @@ header {
 
 }
 
-/* Title styling */
-h1 {
-    color: #C8102E;
-    font-size: 28px;
-    text-align: center;
-    max-width: 100%;
-    flex-grow: 1;
-}
-
 /* Grey text container */
 .text-container {
     background-color:#cfcfcf;
@@ -510,7 +533,8 @@ h1 {
 .coordinador-box {
     background-color: #C8102E;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    height: 350px;
+    height: auto;
+    min-height: 350px;
     width: 400px;
     border-radius: 20px;
     display: flex;
