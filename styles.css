@@ -76,6 +76,11 @@ header {
     height: auto;
 }
 
+.logo1 {
+    width: 140px;
+    height: auto;
+}
+
 /* Menu bar */
 .menu-bar {
     flex-grow: 1;
@@ -799,8 +804,8 @@ header {
     border-radius: 20px;
 }
 
-.objetivos-content h2 {
-    font-size: 2rem;
+.objetivos-content h3 {
+    font-size: 1.5rem;
     margin-bottom: 20px;
 }
 
