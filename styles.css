@@ -72,13 +72,23 @@ header {
 
 /* Logo styles */
 .logo {
-    width: 200px;
+    max-width: 180px;
+    width: auto;
     height: auto;
 }
 
 .logo1 {
-    width: 140px;
+    max-width: 120px;
+    width: auto;
     height: auto;
+}
+
+.logos {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
 }
 
 /* Menu bar */
@@ -88,6 +98,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding-left: 20px;
+    margin-left: 60px;
 }
 
 /* Menu styling */
@@ -173,7 +184,7 @@ header {
 
 @media (max-width: 1400px) {
     .menu-container {
-        flex-direction: column;
+        flex-direction: row;
         align-items: flex-start;
         position: relative;
     }
@@ -205,6 +216,19 @@ header {
         width: 100%;
         display: block;
     }
+
+    .logo {
+        width: 120px;
+    }
+
+    .logo1 {
+        width: 90px;
+        margin-left: 12px;
+    }
+    
+    .logos {
+        flex-direction: row;
+    }
 }
 
 @media (max-width: 576px) {
@@ -217,6 +241,11 @@ header {
         width: 120px;
     }
 
+    .logo1 {
+        width: 90px;
+        margin-left: 12px;
+    }
+
     .menu li {
         margin: 5px 0;
     }
@@ -225,6 +254,142 @@ header {
         padding: 8px;
     }
 }
+
+/* Footer styles */
+footer {
+    background-color: #ffffff;
+    font-family: "IndivisaFont";
+    height: auto;
+    width: 100%;
+    display: block;
+    margin-top: 20px;
+
+  }
+  
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+  }
+  
+.footer-column {
+    flex: 1;
+    padding: 10px;
+    min-width: 200px;
+  }
+  
+  /* Style for logos */
+.logo-footer {
+    height: auto;
+    width: 300px;
+    margin-bottom: 20px;
+  }
+
+.logo-footer1 {
+    height: auto;
+    width: 230px;
+    margin-left: 30px;
+  }
+  
+  /* List styles */
+footer ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+footer ul li {
+    margin-bottom: 10px;
+  }
+  
+footer ul li a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  /* Social media icon styles */
+.social-icons {
+    margin-top: 10px;
+  }
+  
+.social-icon {
+    width: 24px;
+    margin-right: 10px;
+  }
+  
+.social-icon:last-child {
+    margin-right: 0;
+  }
+  
+  /* Responsive design for smaller screens */
+  @media screen and (max-width: 1220px) {
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        display: flex;
+    }
+  
+    .footer-column {
+        margin-bottom: 20px;
+        width: 100%;
+        text-align: center;
+    }
+  
+    /* Adjust logo size for smaller screens */
+    .logo-footer {
+        width: 200px;
+        height: auto;
+        margin-bottom: 15px;
+    }
+
+    .logo-footer1 {
+        width: 170px;
+        height: auto;
+        margin-bottom: 15px;
+    }
+  
+    /* Increase spacing for social icons */
+    .social-icon {
+        margin-right: 15px;
+        width: 30px;
+    }
+  }
+  
+  @media screen and (max-width: 576px) {
+    /* Further adjustments for mobile phones */
+    footer {
+        padding: 20px;
+        justify-content: center;
+    }
+  
+    .footer-column {
+        padding: 5px;
+    }
+  
+    .logo-footer {
+        width: 150px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .logo-footer1 {
+        width: 110px;
+        height: auto;
+    }
+  
+    /* Increase spacing between links */
+    ul li {
+        margin-bottom: 15px;
+    }
+  
+    /* Make social icons slightly larger on mobile */
+    .social-icon {
+        width: 36px;
+        margin-right: 20px;
+    }
+  }
 
 /* Slideshow container */
 .slideshow-container {
