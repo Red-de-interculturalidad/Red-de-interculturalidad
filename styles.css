@@ -233,6 +233,7 @@ header {
 
 @media (max-width: 576px) {
     .menu-container {
+        flex-direction: column;
         margin: 0;
         position: relative;
     }
