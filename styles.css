@@ -33,10 +33,25 @@ body {
     font-family: 'IndivisaFont';
 }
 
+/* -------------- dark mode
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.header.dark-mode, .footer-container.dark-mode {
+    background-color: #1e1e1e;
+}
+
+.menu a.dark-mode, .footer-column a.dark-mode {
+    color: #ffffff;
+}
+*/
+
 /* Title styling */
 h1 {
     color: #C8102E;
-    font-size: 28px;
+    font-size: 2.1rem;
     text-align: center;
     max-width: 100%;
     flex-grow: 1;
@@ -148,39 +163,61 @@ header {
     cursor: pointer;
 }
 
-/* Media queries for responsiveness */
-/*@media (max-width: 1200px) {
-    .menu-container {
-        padding-left: 30px;
-        padding-right: 30px;
-    }
-
-    .menu li {
-        margin: 0 10px;
-    }
-
-    .logo {
-        width: 170px;
-    }
-}
-
-@media (max-width: 1200px) {
-    .menu-container {
+/* Styling the container */
+.language-selector {
+    display: inline-block;
+    position: relative;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Styling the select element */
+  .language-selector select {
+    appearance: none; /* Remove default dropdown arrow */
+    -webkit-appearance: none; /* For Safari */
+    -moz-appearance: none; /* For Firefox */
+    margin-left: 30px;
+    padding: 6px 15px;
+    width: 100px;
+    background-color: #f7f7f7;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    outline: none;
+  }
+  
+  /* Hover and focus effects */
+  .language-selector select:hover,
+  .language-selector select:focus {
+    background-color: #fff;
+    border-color: #bbb;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Style the options inside the dropdown */
+  .language-selector select option {
+    padding: 10px;
+    background-color: #fff;
+    color: #333;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  
+  /* Optional: for smaller screens */
+  @media (max-width: 1800px) {
+    .logos{
         flex-direction: column;
-        align-items: flex-start;
     }
 
     .logo {
-        margin-left: 0;
-        margin-bottom: 10px;
-        width: 150px;
+        margin-left: 12px;
     }
 
-    .menu-bar {
-        padding: 10px;
-        justify-content: flex-start;
-    }
-}*/
+  }
 
 @media (max-width: 1400px) {
     .menu-container {
@@ -229,7 +266,14 @@ header {
     .logos {
         flex-direction: row;
     }
+
+    .language-selector select {
+        margin-left: 0;
+        font-size: 14px;
+        padding: 8px 12px;
+      }
 }
+
 
 @media (max-width: 576px) {
     .menu-container {
@@ -625,13 +669,6 @@ footer ul li a {
     width: 100%;
 }
 
-/* Bi-color title styling */
-.bi-color-title {
-    font-size: 2.5rem;
-    font-weight: bold;
-    text-align: center;
-}
-
 /* Red part of the title */
 .red {
     color: #C8102E;
@@ -886,10 +923,73 @@ footer ul li a {
     text-align: left;
     align-items: center;
     width: auto;
-    background-color: rgb(204, 204, 204);
+    background-color: #fff;
     box-shadow: 0 4px 8px rgba(255, 255, 255, 0.417);
     border-radius: 15px;
 }
+
+.info-invitados {
+    max-width: 500px;
+    width: 100%;
+    margin: 20px auto;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f1f1f1;
+    padding: 15px;
+    border-bottom: 1px solid #ccc;
+}
+
+.dropdown h2 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.arrow {
+    font-size: 18px;
+    transform: rotate(0deg);
+    transition: transform 0.3s ease;
+}
+
+.arrow.open {
+    transform: rotate(90deg);
+}
+
+.dropdown-content {
+    display: none;
+    padding: 20px;
+    font-size: 16px;
+}
+
+.dropdown-content ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.dropdown-content p {
+    margin: 10px 0;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.social-icon {
+    width: 30px;
+    height: 30px;
+}
+
 
 @media (max-width: 768px) {
     .podcast-container {
@@ -915,7 +1015,39 @@ footer ul li a {
         font-size: 1.2em;
         padding: 2%;
     }
+    .dropdown h2 {
+        font-size: 16px;
+    }
+  
+    .dropdown-content {
+        font-size: 14px;
+    }
+  
+    .social-icon {
+        width: 25px;
+        height: 25px;
+    }
 }
+
+@media (max-width: 480px) {
+    .dropdown h2 {
+      font-size: 14px;
+    }
+
+    .dropdown-content {
+      font-size: 13px;
+      padding: 10px;
+    }
+
+    .social-icon {
+      width: 20px;
+      height: 20px;
+    }
+
+    .dropdown {
+      padding: 10px;
+    }
+  }
 
 /*--------------------------------------- Page Convocatoria -----------------------------------------*/
 
@@ -1191,3 +1323,5 @@ footer ul li a {
     }
 }
 
+
+  

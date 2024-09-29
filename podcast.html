@@ -19,6 +19,13 @@
                 <li><a href="./publicaciones.html">Publicaciones</a></li>
                 <li><a href="./podcast.html" class="active">Podcast</a></li>
                 <li><a href="./laboratorio.html">Laboratorio de traducción</a></li>
+                    <!--<div class="language-selector">
+                        <select id="languageSelect" onchange="changeLanguage(this.value)">
+                            <option value="es">Español</option>
+                            <option value="en">English</option>                          
+                          <-- Add more languages as needed --
+                        </select>
+                    </div> -->
             </ul>
         </nav>
     </div>
@@ -26,17 +33,47 @@
 <body class="podcast">
 
     <div class="title-container title-podcast">
-        <h1>¡Al chile!: Hablemos de interculturalidad</h1>
+        <h1>¡Al chile! Hablemos de interculturalidad</h1>
     </div>
     <div class="podcast-container">
-        <h1>PRÓXIMAMENTE: EL PRIMER PODCAST DE INTERCULTURALIDAD QUE NO TE MATARÁ DE ABURRIMIENTO</h1><iframe src="https://open.spotify.com/embed/track/4r216ttWwF7IuJdrXdbl7P?utm_source=generator&theme=0" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+      <h1>PRÓXIMAMENTE: EL PRIMER PODCAST DE INTERCULTURALIDAD QUE NO TE MATARÁ DE ABURRIMIENTO</h1><iframe src="https://open.spotify.com/embed/track/4r216ttWwF7IuJdrXdbl7P?utm_source=generator&theme=0" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
         <div class="text-box">
             <h2>Capitulo 0: introducción</h2>
             Chase ball of string eat plants, meow, and throw up because I ate plants going to catch the red dot today going to catch the red dot today. I could pee on this if I had the energy. Chew iPad power cord steal the warm chair right after you get up for purr for no reason leave hair everywhere, decide to want nothing to do with my owner today.
         </div>    
+        <div class="info-invitados">
+          <div class="dropdown" onclick="toggleDropdown()">
+            <h2>Invitado: Nombre del invitado</h2>
+            <span class="arrow">▶</span>
+          </div>
+          <div class="dropdown-content">
+            <ul>
+              <li><b>Trabajos relevantes</b></li>
+              <p>Lorem ipsum dolor sit amet consectetur adipiscing elit, a mattis himenaeos hac primis arcu pulvinar luctus, auctor malesuada phasellus ut ridiculus bibendum.</p>
+              <li><b>Redes sociales del invitado</b></li>
+              <div class="social-icons">
+                <a href="#"><img src="./assets/PNG/tiktok-icon.png" alt="TikTok" class="social-icon"></a>
+                <a href="#"><img src="./assets/PNG/youtube-icon.png" alt="YouTube" class="social-icon"></a>
+                <a href="#"><img src="./assets/PNG/instagram-icon.png" alt="Instagram" class="social-icon"></a>
+                <a href="#"><img src="./assets/PNG/facebook-icon.png" alt="Facebook" class="social-icon"></a>
+              </div>
+              <li><b>Otras formas de contacto</b></li>
+            </ul>
+          </div>
+        </div>
     </div>
 
+
     <script src="script.js"></script>
+    <script>
+      function toggleDropdown() {
+        const content = document.querySelector('.dropdown-content');
+        const arrow = document.querySelector('.arrow');
+        content.classList.toggle('active');
+        content.style.display = content.style.display === 'block' ? 'none' : 'block';
+        arrow.classList.toggle('open');
+      }
+    </script>
 </body>
 <footer>
     <div class="footer-container">
@@ -77,6 +114,15 @@
           <li>Option 2</li>
           <li><a href="#">Option 3</a></li>
         </ul>
+      </div>
+
+      <!-- Fifth Column: Datos de contacto -->
+      <div class="footer-column">
+        <h4>Contactanos</h4>
+        <ul>
+          <li>riei@lasallebajio.edu.mx</li>
+          <li>+52 1 449 894 1873</li>
+        </ul>
         <h4>Redes sociales</h4>
         <div class="social-icons">
           <a href="#"><img src="./assets/PNG/tiktok-icon.png" alt="TikTok" class="social-icon"></a>
@@ -84,7 +130,7 @@
           <a href="#"><img src="./assets/PNG/instagram-icon.png" alt="Instagram" class="social-icon"></a>
           <a href="#"><img src="./assets/PNG/facebook-icon.png" alt="Facebook" class="social-icon"></a>
         </div>
-      </div>
+       </div>
 
     </div>
   </footer>
