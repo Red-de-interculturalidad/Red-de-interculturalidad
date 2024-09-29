@@ -309,65 +309,65 @@ footer {
     display: block;
     margin-top: 20px;
 
-  }
+}
   
 .footer-container {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     
-  }
+}
   
 .footer-column {
     flex: 1;
     padding: 10px;
     min-width: 200px;
-  }
+}
   
   /* Style for logos */
 .logo-footer {
     height: auto;
     width: 300px;
     margin-bottom: 20px;
-  }
+}
 
 .logo-footer1 {
     height: auto;
     width: 230px;
     margin-left: 30px;
-  }
+}
   
   /* List styles */
 footer ul {
     list-style: none;
     padding: 0;
-  }
+}
   
 footer ul li {
     margin-bottom: 10px;
-  }
+}
   
 footer ul li a {
     text-decoration: none;
     color: #333;
-  }
+}
   
   /* Social media icon styles */
 .social-icons {
     margin-top: 10px;
-  }
+}
   
 .social-icon {
     width: 24px;
     margin-right: 10px;
-  }
+}
   
 .social-icon:last-child {
     margin-right: 0;
-  }
+}
   
   /* Responsive design for smaller screens */
-  @media screen and (max-width: 1220px) {
+@media screen and (max-width: 1220px) {
 
     .footer-container {
         flex-direction: column;
@@ -400,9 +400,9 @@ footer ul li a {
         margin-right: 15px;
         width: 30px;
     }
-  }
+}
   
-  @media screen and (max-width: 576px) {
+@media screen and (max-width: 576px) {
     /* Further adjustments for mobile phones */
     footer {
         padding: 20px;
@@ -434,19 +434,33 @@ footer ul li a {
         width: 36px;
         margin-right: 20px;
     }
-  }
+}
 
+
+/* Slideshow and title container */
+.mega-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Aligns items to the top */
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 150px; /* Optional spacing */
+    box-sizing: border-box;
+    padding: 0 20px; 
+}
 /* Slideshow container */
 .slideshow-container {
     position: relative;
-    max-width: 100%;
-    height: 500px;
+    max-width: 50%;
+    min-width: 50%;
+    height: 400px;
     overflow: hidden;
-    margin-top: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 20px;
+    padding: 0;
 }
 
 /* Show the current slide */
@@ -487,6 +501,7 @@ footer ul li a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border-radius: 20px;
 }
 
 /* Read more button */
@@ -527,7 +542,16 @@ footer ul li a {
 }
 
 /* Responsive design */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1200px) {
+    .mega-container {
+        flex-direction: column;
+        margin-top: 80px;
+    }
+
+    .slideshow-container {
+        min-width: 100%;   
+    }
+
     .slide-text {
         width: 80%;
     }
@@ -559,13 +583,14 @@ footer ul li a {
 
 /* Title and image container */
 .title-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;  
-    margin: 30px;
-    position: relative;
-    flex-wrap: wrap;
-    flex-direction: column;
+        width: 50%;
+        max-width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 30px 0;
+        flex-direction: column;
+        box-sizing: border-box;
 }
 
 /* Image placeholder */
@@ -581,34 +606,46 @@ footer ul li a {
 
 /* Grey text container */
 .text-container {
-    background-color:#cfcfcf;
-    max-width: 850px;
     height: auto;
-    margin: 20px auto;
-    padding: 20px;
-    box-sizing: border-box;
+    width: 80%;
+    margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 20px;
+    padding: 0 10px 0 10px;
+    
 }
 
 /* Textbox inside the grey container */
 .text-box {
-    max-width: 640px;
-    width: 100%;
+    background-color:#c7b6b61c;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px 50px 0 70px;
+    max-width: 580px;
+    min-height: 175px;
+    max-width: 50%;
+    min-width: 50%;
+    height: auto;
     font-size: 16px;
-    line-height: 1.5;
-    text-align: justify;
+    line-height: 1.8;
+    text-align: center;
     padding: 20px;
+    border-radius: 20px;
+
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
+    .title-container {
+        min-width: 100%;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
     .image-space {
-        width: 150px;
+        width: 135px;
         height: 150px;
-        margin-right: 15px;
     }
 
     h1 {
@@ -616,7 +653,9 @@ footer ul li a {
     }
 
     .text-container {
-        max-width: 90%;
+        min-width: 100%;
+        flex-direction: column;
+        padding: 0;
     }
 
     .text-box {
@@ -625,14 +664,10 @@ footer ul li a {
 }
 
 @media (max-width: 576px) {
-    .title-container {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
+
 
     .image-space {
-        width: 120px;
+        width: 105px;
         height: 120px;
         margin-right: 0;
         margin-bottom: 15px;
@@ -681,7 +716,7 @@ footer ul li a {
 
 /* Content boxes */
 .box-linea {
-    background-color: #cfcfcf;
+    background-color: #c7b6b61c;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     height: auto;
     width: 100%;
@@ -739,8 +774,8 @@ footer ul li a {
 
 /* Coordinador box styling */
 .coordinador-box {
-    background-color: #C8102E;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #ffffff73;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     height: auto;
     min-height: 350px;
     width: 400px;
@@ -882,15 +917,22 @@ footer ul li a {
 }
 /*--------------------------------------------------Page Podcast--------------------------------------------------------------*/
 .podcast {
-    background-color: #000000db;
+    background-color: #241d1d1e;
 }
 
 .title-podcast {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    margin: 0 auto;
+}
+.title-podcast h1 {
     background-color:#f9f9f9;
-    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.417);
+    box-shadow:  4px 4px 10px rgba(0, 0, 0, 0.5);
     border-radius: 20px;
     margin-top: 120px;
-
+    padding: 10px;
 }
 .podcast-container{
     height: auto;
@@ -900,32 +942,37 @@ footer ul li a {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    
+    border-top-color:#001E61 ;
+    border-bottom-color: #C8102E;
+    box-shadow:  4px 4px 10px rgba(0, 0, 0, 0.5);
+    border-style: groove;
+    border-radius: 20px;
+    padding: 10px;
 }
 
 .spotify{
     width: 352px;
     align-items: flex-start;
-
 }
 
-.text-box h2{ 
+.text-box1 h2{ 
     width: fit-content;
     text-align: left;
     color: #f4f4f4;
     background-color: #001E61;
     border-radius: 15px;
-    padding: 1%;
+    padding: 2%;
 }
 
-.podcast-container .text-box {
+.podcast-container .text-box1 {
     margin: 50px;
     text-align: left;
     align-items: center;
     width: auto;
     background-color: #fff;
-    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.417);
+    box-shadow:  4px 4px 10px rgba(0, 0, 0, 0.5);
     border-radius: 15px;
+    padding: 1%;
 }
 
 .info-invitados {
@@ -936,7 +983,7 @@ footer ul li a {
     border: 1px solid #ccc;
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow:  4px 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 .dropdown {
@@ -991,12 +1038,16 @@ footer ul li a {
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
     .podcast-container {
         flex-direction: column;
         width: 100%;
         align-items: center;
         margin-top: 20px;
+    }
+
+    .title-podcast h1 {
+        margin-top: 50px;
     }
 
     .spotify {
@@ -1005,13 +1056,13 @@ footer ul li a {
         margin-bottom: 20px;
     }
 
-    .podcast-container .text-box {
+    .podcast-container .text-box1 {
         width: 90%;
         margin: 20px 0;
-        padding: 10px;
+        padding: 15px;
     }
 
-    .text-box h2 {
+    .text-box1 h2 {
         font-size: 1.2em;
         padding: 2%;
     }
@@ -1115,6 +1166,7 @@ footer ul li a {
 .carousel-container {
     width: 45%;
     position: relative;
+    padding: 10px;
 }
 
 .carousel {
@@ -1125,6 +1177,7 @@ footer ul li a {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     touch-action: pan-y; /* Enable touch support */
     transition: transform 0.5s ease-in-out;
+    padding: 2px;
 }
 
 /* Slideshow and Carousel container styling */
@@ -1138,6 +1191,7 @@ footer ul li a {
     display: inline-block;
     transition: transform 0.5s ease-in-out;
     min-width: 100%;
+    padding: 10px 0 10px 0;
 }
 
 .carousel-item h3 {
@@ -1220,7 +1274,8 @@ footer ul li a {
 }
 
 .participation-card {
-    background-color: #cfcfcf;
+    background-color: #c7b6b61c;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 20px;
     border-radius: 10px;
     cursor: pointer;
