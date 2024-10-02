@@ -99,6 +99,11 @@
                     <h2>Talleres</h2>
                     <p>Haz clic para más información</p>
                 </div>
+
+                <div class="participation-card" onclick="showInfo('costos')">
+                    <h2>Costos</h2>
+                    <p>Haz clic para más información</p>
+                </div>
             </div>
         </div>
     </div>
@@ -197,11 +202,14 @@ document.querySelector('.carousel').addEventListener('touchend', () => {
             <li>Título de la ponencia.</li>
             <li>Autores y adscripción (máximo 2 autores).</li>
             <li>Línea General de conocimiento en la que desea participar.</li>
-            <li>Un resumen de 550 palabras máximo en español o inglés.</li>
-            <li>Planteamiento del problema.</li>
-            <li>Pertinencia intercultural.</li>
-            <li>Diseño metodológico.</li>
-            <li>Resultados y conclusiones.</li>
+            <li>Un resumen de 800 palabras máximo en español o inglés que intégre:
+                <ul>
+                    <li>Planteamiento del problema.</li>
+                    <li>Pertinencia intercultural.</li>
+                    <li>Diseño metodológico.</li>
+                    <li>Resultados y conclusiones.</li>
+                </ul>
+            </li>
             <li>Al menos un autor de la actividad debe estar inscrito en el Congreso para poder ser expuesta.</li>  
         </ul>
         <p>Enviar propuesta en formato Word a: <a href="mailto:riei@lasallebajio.edu.mx">riei@lasallebajio.edu.mx</a> escribiendo “Ponencia_Linea 1 o 2 o 3 o 4_Apellido autores” en el asunto y en documento adjunto. Por ejemplo: “Ponencia_linea3_Perez”.</p>
@@ -238,7 +246,30 @@ document.querySelector('.carousel').addEventListener('touchend', () => {
         </ul>
         <p>Las propuestas serán evaluadas por el Comité Científico.</p>
         <p>Enviar propuesta a: <a href="mailto:riei@lasallebajio.edu.mx">riei@lasallebajio.edu.mx</a></p>
-    `
+    `,
+    costos: `
+        <h2>Costos</h2>
+        <table border="4">
+            <tr>
+                <th>Concepto</th>
+                <th>Costo</th>
+            </tr>
+            <tr>
+                <td>Estudiantes de licenciatura y posgrado</td>
+                <td>$300</td>
+            </tr>
+            <tr>
+                <td>Asistentes en general</td>
+                <td>$300</td>
+            </tr>
+            <tr>
+                <td>Talleres presenciales</td>
+                <td>$200</td>
+            </tr>
+        </table>
+
+    ` 
+    
 };
 
 function showInfo(type) {
@@ -294,7 +325,7 @@ function showInfo(type) {
             <h4>Contactanos</h4>
             <ul>
                 <li>riei@lasallebajio.edu.mx</li>
-                <li>+52 1 449 894 1873</li>
+                <li>+52 477 710 8500 ext. 5003</li>
             </ul>
             <h4>Redes sociales</h4>
             <div class="social-icons">

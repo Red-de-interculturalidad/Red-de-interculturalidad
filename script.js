@@ -75,6 +75,32 @@ document.querySelector('.slideshow-container').addEventListener('touchmove', han
 document.querySelector('.slideshow-container').addEventListener('touchend', handleSlideTouchEnd);
 
 
+//------------------------------------------------ DARK MODE
+/*
+document.addEventListener('DOMContentLoaded', function () {
+    const toggleButton = document.createElement('button');
+    toggleButton.innerHTML = '🌙 Dark Mode';
+    toggleButton.style.position = 'fixed';
+    toggleButton.style.top = '10px';
+    toggleButton.style.right = '10px';
+    toggleButton.style.padding = '10px 20px';
+    toggleButton.style.backgroundColor = '#007bff';
+    toggleButton.style.color = '#fff';
+    toggleButton.style.border = 'none';
+    toggleButton.style.cursor = 'pointer';
 
+    document.body.appendChild(toggleButton);
 
+    toggleButton.addEventListener('click', function () {
+        document.body.classList.toggle('dark-mode');
+        document.querySelector('header').classList.toggle('dark-mode');
+        document.querySelector('footer').classList.toggle('dark-mode');
 
+        // Update link colors in dark mode
+        document.querySelectorAll('.menu a, .footer-column a').forEach(link => {
+            link.classList.toggle('dark-mode');
+        });
+    });
+});
+
+*/

@@ -82,7 +82,7 @@ header {
     width: 96%;
     padding-right: 20px;
     border-radius: 10px;
-    
+    flex-wrap: wrap;
 }
 
 /* Logo styles */
@@ -102,7 +102,6 @@ header {
     display: flex;
     flex-direction: row;
     align-items: center;
-    align-content: center;
     justify-content: center;
 }
 
@@ -114,6 +113,7 @@ header {
     align-items: center;
     padding-left: 20px;
     margin-left: 60px;
+    flex-wrap: wrap;
 }
 
 /* Menu styling */
@@ -129,7 +129,7 @@ header {
 }
 
 .menu li {
-    margin: 0 15px;
+    margin: 0 10px;
     flex-shrink: 1;
     flex-grow: 1;
     text-align: center;
@@ -145,16 +145,16 @@ header {
     transition: background-color 0.3s ease, color 0.3s ease;
     display: block;
     width: 100%;
+    flex-shrink: 1;
 }
 
-/* Highlight active page and hover effect */
 .menu li a.active, 
 .menu li a:hover {
     background-color: #C8102E;
     color: #ffffff;
 }
 
-/* Hamburger menu styling */
+
 .menu-toggle {
     display: none;
     background: none;
@@ -163,70 +163,26 @@ header {
     cursor: pointer;
 }
 
-/* Styling the container */
-.language-selector {
-    display: inline-block;
-    position: relative;
-    font-family: Arial, sans-serif;
-  }
-  
-  /* Styling the select element */
-  .language-selector select {
-    appearance: none; /* Remove default dropdown arrow */
-    -webkit-appearance: none; /* For Safari */
-    -moz-appearance: none; /* For Firefox */
-    margin-left: 30px;
-    padding: 6px 15px;
-    width: 100px;
-    background-color: #f7f7f7;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    font-size: 16px;
-    font-weight: 500;
-    color: #333;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    transition: all 0.3s ease;
-    outline: none;
-  }
-  
-  /* Hover and focus effects */
-  .language-selector select:hover,
-  .language-selector select:focus {
-    background-color: #fff;
-    border-color: #bbb;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-  }
-  
-  /* Style the options inside the dropdown */
-  .language-selector select option {
-    padding: 10px;
-    background-color: #fff;
-    color: #333;
-    font-size: 16px;
-    font-weight: 500;
-  }
-  
-  /* Optional: for smaller screens */
-  @media (max-width: 1800px) {
-    .logos{
-        flex-direction: column;
-    }
-
-    .logo {
-        margin-left: 12px;
-    }
-
-  }
-
-@media (max-width: 1400px) {
+/* Responsive design: make the menu and logos adapt to smaller screens */
+@media screen and (max-width: 1100px) {
     .menu-container {
-        flex-direction: row;
-        align-items: flex-start;
-        position: relative;
+        padding-right: 10px;
+        flex-wrap: wrap;
+    }
+    .menu-bar {
+        margin-left: 30px;
+        padding-left: 10px;
+    }
+    .logo, .logo1 {
+        max-width: 150px;
+    }
+    .menu li {
+        margin: 0 8px;
+    }
+    .menu li a {
+        padding: 8px 16px;
     }
 
-    /* Hamburger menu for smaller screens */
     .menu-toggle {
         display: block;
         margin-left: 10px;
@@ -239,7 +195,32 @@ header {
         width: 100%;
     }
 
-    /* Show menu when hamburger is clicked */
+    .menu.active {
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .menu-container {
+        padding-right: 5px;
+    }
+
+    .menu-bar {
+        margin-left: 10px;
+        padding-left: 5px;
+    }
+    .menu-toggle {
+        display: block;
+        margin-left: 10px;
+    }
+
+    .menu {
+        flex-direction: column;
+        align-items: flex-start;
+        display: none;
+        width: 100%;
+    }
+
     .menu.active {
         display: flex;
     }
@@ -255,7 +236,7 @@ header {
     }
 
     .logo {
-        width: 120px;
+        width: 90px;
     }
 
     .logo1 {
@@ -266,37 +247,52 @@ header {
     .logos {
         flex-direction: row;
     }
-
-    .language-selector select {
-        margin-left: 0;
-        font-size: 14px;
-        padding: 8px 12px;
-      }
 }
 
-
-@media (max-width: 576px) {
+@media screen and (max-width: 480px) {
     .menu-container {
-        flex-direction: column;
-        margin: 0;
+        flex-direction: row;
+        align-items: flex-start;
         position: relative;
     }
 
+    .menu-toggle {
+        display: block;
+        margin-left: 10px;
+    }
+
+    .menu {
+        flex-direction: column;
+        align-items: flex-start;
+        display: none;
+        width: 100%;
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+    .menu li {
+        margin: 10px 0;
+    }
+
+    .menu li a {
+        padding: 10px;
+        width: 100%;
+        display: block;
+    }
+
     .logo {
-        width: 120px;
+        width: 90px;
     }
 
     .logo1 {
         width: 90px;
         margin-left: 12px;
     }
-
-    .menu li {
-        margin: 5px 0;
-    }
-
-    .menu li a {
-        padding: 8px;
+    
+    .logos {
+        flex-direction: row;
     }
 }
 
@@ -365,9 +361,19 @@ footer ul li a {
 .social-icon:last-child {
     margin-right: 0;
 }
+
+@media screen and (max-width: 1400px) {
+    .logo-footer {
+        width: 250px;
+    }
+
+    .logo-footer1 {
+        width: 180px
+    }
+}
   
-  /* Responsive design for smaller screens */
-@media screen and (max-width: 1220px) {
+
+@media screen and (max-width: 900px) {
 
     .footer-container {
         flex-direction: column;
@@ -544,12 +550,12 @@ footer ul li a {
 /* Responsive design */
 @media screen and (max-width: 1200px) {
     .mega-container {
-        flex-direction: column;
-        margin-top: 80px;
+        flex-direction: row;
+        margin-top: 120px;
     }
 
     .slideshow-container {
-        min-width: 100%;   
+        min-width: 50%;   
     }
 
     .slide-text {
@@ -566,6 +572,10 @@ footer ul li a {
 }
 
 @media screen and (max-width: 576px) {
+    .slideshow-container {
+        min-width: 100%;   
+    }
+
     .slide-text {
         width: 90%;
         font-size: 14px;
@@ -637,7 +647,7 @@ footer ul li a {
 /* Responsive Design */
 @media (max-width: 1200px) {
     .title-container {
-        min-width: 100%;
+        min-width: 50%;
         flex-direction: column;
         align-items: center;
         text-align: center;
@@ -655,7 +665,7 @@ footer ul li a {
     .text-container {
         min-width: 100%;
         flex-direction: column;
-        padding: 0;
+        padding: 0
     }
 
     .text-box {
@@ -679,7 +689,7 @@ footer ul li a {
 
     .text-container {
         max-width: 95%;
-        padding: 15px;
+        padding: 0;
     }
 
     .text-box {
@@ -698,7 +708,7 @@ footer ul li a {
 .container-lineas {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 20px;
+    grid-gap: 30px;
     justify-items: center;
     margin-top: 50px;
     width: 100%;
@@ -719,6 +729,7 @@ footer ul li a {
     background-color: #c7b6b61c;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     height: auto;
+    min-height: 350px;
     width: 100%;
     max-width: 700px;
     padding: 20px;
@@ -727,7 +738,6 @@ footer ul li a {
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin-top: 20px;
     box-sizing: border-box;
     word-wrap: break-word;
     border-radius: 20px;
@@ -748,24 +758,13 @@ footer ul li a {
     }
 }
 
-/* Coordinadores section */
-.coordinadores-section {
-    margin-top: 50px;
-    text-align: center;
-}
-
-/* Coordinadores title styling */
-.coordinadores-title {
-    font-size: 2rem;
-    color: #001E61;
-    margin-bottom: 40px;
-}
+/* Coordinador section */
 
 /* Container for all coordinador boxes */
 .coordinadores-container {
     display: flex;
     flex-wrap:nowrap;
-    gap: 20px;
+    gap: 30px;
     margin: 30px;
     align-items: center;
     align-content: center;
@@ -927,6 +926,7 @@ footer ul li a {
     width: 50%;
     margin: 0 auto;
 }
+
 .title-podcast h1 {
     background-color:#f9f9f9;
     box-shadow:  4px 4px 10px rgba(0, 0, 0, 0.5);
@@ -934,6 +934,7 @@ footer ul li a {
     margin-top: 120px;
     padding: 10px;
 }
+
 .podcast-container{
     height: auto;
     width: auto;
@@ -1026,13 +1027,13 @@ footer ul li a {
     margin: 10px 0;
 }
 
-.social-icons {
+.social-icons1 {
     display: flex;
     gap: 10px;
     margin-top: 10px;
 }
 
-.social-icon {
+.social-icon2 {
     width: 30px;
     height: 30px;
 }
@@ -1074,7 +1075,7 @@ footer ul li a {
         font-size: 14px;
     }
   
-    .social-icon {
+    .social-icon2 {
         width: 25px;
         height: 25px;
     }
@@ -1090,7 +1091,7 @@ footer ul li a {
       padding: 10px;
     }
 
-    .social-icon {
+    .social-icon2 {
       width: 20px;
       height: 20px;
     }
